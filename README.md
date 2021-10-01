@@ -16,25 +16,24 @@ Version 0.1
  
  ## Important Functions
  
-   * **model** (model_name,velocity,depth):                            create a .crh hypoinverse model file
+   * **model** (model_name,velocity,depth): create a .crh hypoinverse model file
     
-   * **add_station** (station_filename,station_code,
-    network_code,channel_code,latitude,longitude,elevation):          create .sta hypoinverse station file and add station list to it  
+   * **add_station** (station_filename,station_code, network_code,channel_code,latitude,longitude,elevation): *create .sta hypoinverse station file and add station list to it*  
     
-   * **add_picks** (phase_filename,station,net,channel,                
-    p_arrival_time, s_arrival_time):                                  add P and S pick to .phs hypoinverse phase file
+   * **add_picks** (phase_filename,station,net,channel, p_arrival_time, s_arrival_time): *add P and S pick to .phs hypoinverse phase file*
 
-   * **create_phase_file** (phase_filename,evid,trail_t,               create .phs phase file    
-    trail_lat,trail_long):
-        
-   * **locate** (model_name,station_filename,phase_filename,           generates the .hyp file (input file ) to run hypoinverse
-    output_filename):
+   * **create_phase_file** (phase_filename,evid,trail_t,trail_lat,trail_long): *create .phs phase file*    
     
-   * **export_located** (output_filename):                             export the located event as 'Located.csv' format 
+        
+   * **locate** (model_name,station_filename,phase_filename,output_filename): *generates the .hyp file (input file ) to run hypoinverse*
+    
+    
+   * **export_located** (output_filename):*export the located event as 'Located.csv' format* 
 
  
  ## Prerequisites
- * obspy 3.02: [Download](https://github.com/obspy/obspy)
+ 
+ * obspy 1.2.0: [Download](https://github.com/obspy/obspy)
  * hypoinverse 1.4 [Download](https://www.usgs.gov/software/hypoinverse-earthquake-location)
 
 ## Getting started.
@@ -44,6 +43,7 @@ Version 0.1
 * open the source folder
 * Run setup.py to build Hypoinverse or
 * Run following command in the Terminal: **make -f makefile**
+* **Note** : make sure you have f77 compiler to build the hypoinverse file. If you have g77 or any other version, Open make file and find and replace f77 with your version.
 
 #### Tutorial 
 
@@ -61,3 +61,7 @@ Version 0.1
 ## Acknowledgments
 
 * I would like to thanks Dr. Satish Maurya (Department of Earth Science, IIT Bombay)  for his guidance. 
+
+
+## Reference
+*Klein, Fred. (2014). User's Guide to HYPOINVERSE-2000, a Fortran Program to Solve for Earthquake Locations and Magnitudes, Version 1.40, June 2014. 10.13140/2.1.4859.3602.* 
